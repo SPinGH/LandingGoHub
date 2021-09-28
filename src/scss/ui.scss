@@ -1,0 +1,48 @@
+body {
+    font-family: $fontFamily;
+}
+.container {
+    margin: 0 auto;
+    max-width: $maxWidthContainer + 20px;
+    padding: 0 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px 11px;
+    background-color: $accentColor;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: -7px 7px 20px 0px $shadowColor;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid $accentColor;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #ffffff;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #ffffff;
+            color: $accentColor;
+        }
+    }
+}
+
+.title {
+    @include respValue('font-size', 48, 32, 1);
+    line-height: 1.3em;
+    font-weight: 300;
+    color: $textColor;
+    &--dark {
+        color: $bgColor;
+    }
+}
+.title-text {
+    @include respValue('font-size', 23, 18, 1);
+    line-height: 1.5em;
+    font-weight: 300;
+    color: $lightTextColor;
+    &--dark {
+        color: $bgColor;
+    }
+}
